@@ -14,7 +14,7 @@ Please feel free to add any tests to check the API.
 
 posts.js:  It contains the async function inside which:
 
-We are making separate API calls to https://api.hatchways.io/assessment/blog/posts for each tag parameter associated with tags parameter of our API. Some examples of valid tag parameters are science, tech, history etc.
+We are making separate API calls to a third party API for each tag parameter associated with tags parameter of our API. Some examples of valid tag parameters are science, tech, history etc.
 Combining all the results from the API requests above and saving them into the data.json file for record.
 Calling the removeDuplicates() function to make sure there are no repeated posts.
 After that, calling the sortPosts() function that sorts all the posts based on the sortBy and direction parameter. If the parameters are not provided , the posts will be sorted based on the ids.
@@ -23,10 +23,13 @@ After that, calling the sortPosts() function that sorts all the posts based on t
 
 
 saveData(): for saving data onto the data.json files. 
+
 loadData(): to read from the file.
-removeDuplicates(): the function makes sure that no post is repeated. The posts are getting filtered based on their ids (as all posts should have unique ids). We are using the set data structure and the algorithm runs in O(n) time. 
-sortPosts(): sorting the posts based on the sortBy parameter or by default in ascending order.
- sortPostsDescending() : sorting the posts in descending order if required.
+
+removeDuplicates(): the function makes sure that no post is repeated. The posts are getting filtered based on their ids (as all posts should have unique ids). We are using the set data structure and the algorithm runs in O(n) time.
+
+sortPosts(): sorting the posts based on the sortBy parameter or by default in ascending or descending order.
+ 
 
  Data Source:
  We are using a third party API as data source.
